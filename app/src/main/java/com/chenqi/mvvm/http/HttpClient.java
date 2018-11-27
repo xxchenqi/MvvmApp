@@ -27,7 +27,6 @@ public class HttpClient {
 //                    //获得请求信息，此处如有需要可以添加headers信息
 //                    Request request = chain.request();
 //                    //添加Cookie信息
-//                    // TODO: 2017/10/20  设置请求header
 ////                    request = request.newBuilder().addHeader("Content-Type", "application/json").addHeader("x-token", CreditMoneyApplication.getAppInstance().getUserDetails() == null ? "" : CreditMoneyApplication.getAppInstance().getUserDetails().getToken()).build();
 //                    //打印请求信息
 //                    if (Log) {
@@ -80,7 +79,6 @@ public class HttpClient {
                 .client(okHttpClient)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-//                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
 //                .addConverterFactory(ScalarsConverterFactory.create())
                 .build();
         client = retrofit.create(ApiService.class);

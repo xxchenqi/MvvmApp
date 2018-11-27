@@ -9,6 +9,8 @@ import com.kingja.loadsir.callback.Callback;
 import com.kingja.loadsir.core.LoadService;
 import com.kingja.loadsir.core.LoadSir;
 
+import butterknife.ButterKnife;
+
 public abstract class BaseActivity extends AppCompatActivity {
 
     protected LoadService loadService;
@@ -17,7 +19,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
-
+        ButterKnife.bind(this);
         initSir();
         initView();
         initData();
@@ -30,6 +32,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                 reLoad();
             }
         });
+        loadService.showSuccess();
     }
 
 

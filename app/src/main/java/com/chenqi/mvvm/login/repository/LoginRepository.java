@@ -1,4 +1,4 @@
-package com.chenqi.mvvm.repository;
+package com.chenqi.mvvm.login.repository;
 
 import android.arch.lifecycle.MutableLiveData;
 
