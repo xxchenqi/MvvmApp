@@ -80,6 +80,12 @@ public class MainActivity extends BaseActivity {
 
         // 设置底部 BottomBar 默认选中 home
         navigation_bar.setFirstSelectedPosition(HOME);
+
+        navigation_bar
+                .setActiveColor(R.color.colorPrimary)
+                .setInActiveColor("#FFFFFF")
+                .setBarBackgroundColor("#ECECEC");
+
         // 初始化
         navigation_bar.initialise();
 
